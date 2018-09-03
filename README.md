@@ -24,7 +24,11 @@ Browser start with search for localhost:3000
 
 * [What does render do?](https://www.pathinteractive.com/blog/design-development/rendering-a-webpage-with-google-webmaster-tools/) The rendering engine displays what you see on your screen. It communicates with the networking layer of the browser to grab HTML code and other items passed from a remote server.
 
-# ![Rendering engine](Render.png "Description goes here")
+* ![Rendering engine](Render.png "Description goes here")
+
+* [What is app.use?](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes) Sets up middleware by calling the Router to the middleware handling path, specifying an URL path.
+
+* FYI - [POST]() is used to create/insert data and [PUT]() used to update data.
 
 # Created By
 * Sonia Bradley

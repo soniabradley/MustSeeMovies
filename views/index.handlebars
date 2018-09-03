@@ -1,0 +1,25 @@
+<h1>Must See Movies</h1>
+<ul>
+{{#each movies}}
+    <li>
+        <p>{{this.id}}. {{this.movie}}</p>
+    </li>
+{{/each}}
+</ul>
+
+{{!-- now create express route that will post this information to the Web page on server.js--}}
+
+{{!-- create form for database, reference create, then go to server.js to create route--}}
+<h2>Add a Movie to Watch</h2>
+<form method="POST" action="/create">
+    <textarea type="text" name="movie" placeholder="Name of Movie"></textarea>
+    <button type="submit">SAVE MOVIE</button>
+</form>
+{{!-- create form to update movie entry, reference update, then go to server.js to create route--}}
+<h2>Update a Movie</h2>
+<form method="POST" action="/update?_method=PUT">
+    <textarea type="text" name="id" placeholder="#Movie"></textarea>
+    <textarea type="text" name="movie" placeholder="Name of New Movie"></textarea>
+    <button type="submit">UPDATE MOVIE</button>
+</form>
+
