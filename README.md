@@ -33,6 +33,10 @@ Browser start with search for localhost:3000
 # Created By
 * Sonia Bradley
 
+# Acknowledgments
+
+Duy Do - Thank you very much for always finding my errors!
+
 
 
 

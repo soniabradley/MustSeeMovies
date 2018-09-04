@@ -34,6 +34,7 @@ connection.connect(function (err) {
 });
 
 // Create connection from MySql(index.handlebars) database to the Web page
+//  * Note, res, result, and results
 app.get('/',function(req,res){
     connection.query('SELECT * FROM movies;',function(err,data){
         res.render('index',{movies:data});
@@ -49,7 +50,15 @@ app.post('/create', function(req,res){
 })
 
 app.put('/update', function(req,res){
-    connection.query('UPDATE movies SET movie = ? WHERE id =?);', [req.body.movie, req.body.id],
+    connection.query('UPDATE movies SET movie = ? WHERE id = ?;', [req.body.movie, req.body.id],
+    function(err,results){
+        if(err)throw err;
+        res.redirect('/');
+    })
+})
+
+app.delete('/delete', function(req,res){
+    connection.query('DELETE FROM movies WHERE id = ?;', [req.body.id],
     function(err,results){
         if(err)throw err;
         res.redirect('/');

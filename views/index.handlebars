@@ -2,7 +2,13 @@
 <ul>
 {{#each movies}}
     <li>
-        <p>{{this.id}}. {{this.movie}}</p>
+        <p>{{this.id}}. {{this.movie}}
+
+            <form action="/delete?_method=DELETE" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">DELETE</button>
+            </form>   
+         </p>
     </li>
 {{/each}}
 </ul>
